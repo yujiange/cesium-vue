@@ -30,9 +30,11 @@ const webpackConfig = merge(baseWebpackConfig, {
     chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
   },
   plugins: [
+     new webpack.ProvidePlugin({ //将变量(模块对象) 挂载到window对象下
+           Cesium:'cesium/Cesium', //值为模块名称 require('cesium/Cesium') 必须提起下载好模块
+     }),
      new webpack.optimize.CommonsChunkPlugin({
-            name: 'cesium',
-            minChunks: module => module.context && module.context.indexOf('cesium') !== -1
+            name: 'Cesium' //提取Cesium
      }),
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
