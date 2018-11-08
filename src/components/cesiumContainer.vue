@@ -4,8 +4,6 @@
 </template>
 
 <script>
-import Cesium from 'cesium/Cesium'; 
-import  widgets from'cesium/Widgets/widgets.css';
 
 export default {
   name: 'cesiumContainer',
