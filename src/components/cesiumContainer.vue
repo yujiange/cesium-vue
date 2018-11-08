@@ -2,9 +2,7 @@
    <div id="cesiumContainer">
    </div>
 </template>
-
 <script>
-
 export default {
   name: 'cesiumContainer',
   mounted(){

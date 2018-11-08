@@ -30,8 +30,9 @@ const webpackConfig = merge(baseWebpackConfig, {
     chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
   },
   plugins: [
-     new webpack.ProvidePlugin({ //将变量(模块对象) 挂载到window对象下
+     new webpack.ProvidePlugin({ //将变量(模块对象) 挂载到全局
            Cesium:'cesium/Cesium', //值为模块名称 require('cesium/Cesium') 必须提起下载好模块
+           'window.Cesium':'cesium/Cesium',
      }),
      new webpack.optimize.CommonsChunkPlugin({
             name: 'Cesium' //提取Cesium
