@@ -4,8 +4,7 @@
 
 <script>
 import 'cesium/Build/Cesium/Widgets/widgets.css'
-import { Viewer } from 'Cesium'
-
+import { Viewer } from 'cesium'
 export default {
   name: 'CesiumContainer',
   mounted() {
